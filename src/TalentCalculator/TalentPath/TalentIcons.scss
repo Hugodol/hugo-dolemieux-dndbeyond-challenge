@@ -1,0 +1,92 @@
+.talent-icon {
+  cursor: pointer;
+  background-image: url('../../Assets/talent-icons-sprite.png');
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+  background-position-y: -50px;
+
+  &:hover {
+    background-position-y: 0px;
+  }
+}
+
+.talent-border {
+  background: linear-gradient(#505050, #363636);
+  padding: 3px;
+}
+
+.talent-border-selected {
+  background: linear-gradient(#6eacea, #3c4b57);
+  animation: rotate 0.2s linear;
+  box-shadow: 0 0 10px #505050;
+}
+
+.talent-link-bar {
+  position: relative;
+  height: 12px;
+  width: 100px;
+  background-color: #141617;
+  border-top: 2px solid #181a1b;
+  border-bottom: 2px solid #181a1b;
+}
+
+.talent-link-bar-selected {
+  background-color: #303133;
+  border-top: 2px solid #383b3c;
+  border-bottom: 2px solid #383b3c;
+}
+
+.is-selected {
+  background-position-y: 0px;
+}
+
+.talent-stacks {
+  background-position-x: 0px;
+}
+
+.talent-ustensiles {
+  background-position-x: -50px;
+}
+
+.talent-cake {
+  background-position-x: -100px;
+}
+
+.talent-crown {
+  background-position-x: -150px;
+}
+
+.talent-ship {
+  background-position-x: -200px;
+}
+
+.talent-scuba {
+  background-position-x: -250px;
+}
+
+.talent-lightning {
+  background-position-x: -300px;
+}
+
+.talent-skull {
+  background-position-x: -350px;
+}
+
+@keyframes rotate {
+  0% {
+    background: linear-gradient(#6eacea, #3c4b57);
+  }
+  25% {
+    background: linear-gradient(to right, #6eacea, #3c4b57);
+  }
+  50% {
+    background: linear-gradient(#3c4b57, #6eacea);
+  }
+  75% {
+    background: linear-gradient(to left, #6eacea, #3c4b57);
+  }
+  100% {
+    background: linear-gradient(#6eacea, #3c4b57);
+  }
+}

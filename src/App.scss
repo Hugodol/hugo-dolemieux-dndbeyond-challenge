@@ -1,0 +1,14 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(7px + 2vmin);
+  color: white;
+}
+
+@media screen and (max-width: 1175px) {
+  .App {
+    align-items: flex-start;
+  }
+}
