@@ -1,18 +1,21 @@
+@import '../../mixin.scss';
+@import '../../variables.scss';
+
 .points-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background-color: #080b0c;
-  border: 2px solid #121313;
+  background-color: $points-container;
+  border: 2px solid $points-container-border;
 }
 
 .points-spent {
-  color: #384f66;
+  color: $secondary-text;
 }
 
-@media screen and (max-width: 1175px) {
+@include medium-screen {
   .points-container {
     margin-bottom: 50px;
   }

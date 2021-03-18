@@ -1,3 +1,5 @@
+@import '../../mixin.scss';
+
 .talent-path {
   display: flex;
   flex-direction: row;
@@ -16,7 +18,7 @@
   width: 75%;
 }
 
-@media screen and (max-width: 1175px) {
+@include medium-screen {
   .talent-path {
     flex-direction: column;
   }
@@ -30,7 +32,7 @@
   }
 }
 
-@media screen and (max-width: 460px) {
+@include small-screen {
   .talent-buttons {
     width: 75%;
   }

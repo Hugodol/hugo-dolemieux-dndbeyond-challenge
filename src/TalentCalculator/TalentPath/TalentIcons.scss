@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .talent-icon {
   cursor: pointer;
   background-image: url('../../Assets/talent-icons-sprite.png');
@@ -12,29 +14,29 @@
 }
 
 .talent-border {
-  background: linear-gradient(#505050, #363636);
+  background: $talent-border;
   padding: 3px;
 }
 
 .talent-border-selected {
-  background: linear-gradient(#6eacea, #3c4b57);
+  background: $talent-border-selected;
   animation: rotate 0.2s linear;
-  box-shadow: 0 0 10px #505050;
+  box-shadow: 0 0 10px $talent-selected-shadow;
 }
 
 .talent-link-bar {
   position: relative;
   height: 12px;
   width: 100px;
-  background-color: #141617;
-  border-top: 2px solid #181a1b;
-  border-bottom: 2px solid #181a1b;
+  background-color: $link-bar;
+  border-top: 2px solid $link-bar-border;
+  border-bottom: 2px solid $link-bar-border;
 }
 
 .talent-link-bar-selected {
-  background-color: #303133;
-  border-top: 2px solid #383b3c;
-  border-bottom: 2px solid #383b3c;
+  background-color: $link-bar-selected;
+  border-top: 2px solid $link-bar-border-selected;
+  border-bottom: 2px solid $link-bar-border-selected;
 }
 
 .is-selected {
@@ -75,18 +77,18 @@
 
 @keyframes rotate {
   0% {
-    background: linear-gradient(#6eacea, #3c4b57);
+    background: $talent-border-selected;
   }
   25% {
-    background: linear-gradient(to right, #6eacea, #3c4b57);
+    background: linear-gradient(to right, $talent-border-selected-light, $talent-border-selected-dark);
   }
   50% {
-    background: linear-gradient(#3c4b57, #6eacea);
+    background: linear-gradient($talent-border-selected-dark, $talent-border-selected-light);
   }
   75% {
-    background: linear-gradient(to left, #6eacea, #3c4b57);
+    background: linear-gradient(to left, $talent-border-selected-light, $talent-border-selected-dark);
   }
   100% {
-    background: linear-gradient(#6eacea, #3c4b57);
+    background: $talent-border-selected;
   }
 }

@@ -1,3 +1,6 @@
+@import '../mixin.scss';
+@import '../variables.scss';
+
 .talent-calculator-container {
   background-image: url('../Assets/talent-calc-bg.png');
   width: 80%;
@@ -5,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid #080b0c;
+  border: 3px solid $main-border;
 }
 
 .talent-calculator-title {
@@ -13,7 +16,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  background: rgba($color: #1e2228, $alpha: 0.5);
+  background: $title-background;
   width: 95%;
   min-height: 40px;
   margin-top: 20px;
@@ -33,7 +36,7 @@
   flex-grow: 1;
 }
 
-@media screen and (max-width: 1175px) {
+@include medium-screen {
   .talent-calculator-container {
     width: 100%;
     height: 100vh;
