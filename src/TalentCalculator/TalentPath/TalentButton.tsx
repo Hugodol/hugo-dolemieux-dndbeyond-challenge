@@ -9,8 +9,10 @@ import { SelectTalentAction, DeselectTalentAction } from '../../Redux/Actions/ty
 import './TalentIcons.scss';
 
 interface IProps {
+  key: string;
   index: number;
   lastIndex: number;
+  name: string;
   imageClass: string;
   path: string;
   isSelected: boolean;
@@ -24,23 +26,27 @@ class TalentButton extends React.Component<IProps, {}> {
   render() {
     return (
       <>
-        <li key={`talent-${this.props.path}-${this.props.index}`} className={`talent-border ${this.props.isSelected && 'talent-border-selected'}`}>
-          <div
-            className={`talent-icon talent-${this.props.imageClass} ${this.props.isSelected && 'is-selected'}`}
-            onClick={this.handleOnClick}
-          />
-        </li>
+        <button
+          key={this.props.key}
+          className={`talent-border ${this.props.isSelected && 'talent-border-selected'}`}
+          onClick={this.handleOnClick}
+          onContextMenu={this.handleOnContextMenu}
+          aria-label={this.props.name}
+        >
+          <div className={`talent-icon talent-${this.props.imageClass} ${this.props.isSelected && 'is-selected'}`} />
+        </button>
         {this.renderLinkBar()}
       </>
     );
   }
 
   handleOnClick = () => {
-    if (this.props.isSelected) {
-      this.props.deselectTalent(this.props.path, this.props.index);
-    } else {
-      this.props.selectTalent(this.props.path, this.props.index);
-    }
+    this.props.selectTalent(this.props.path, this.props.index);
+  }
+
+  handleOnContextMenu = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    this.props.deselectTalent(this.props.path, this.props.index);
   }
 
   renderLinkBar = () => {

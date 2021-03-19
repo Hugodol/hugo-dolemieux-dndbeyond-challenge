@@ -1,7 +1,6 @@
 @import '../../variables.scss';
 
 .talent-icon {
-  cursor: pointer;
   background-image: url('../../Assets/talent-icons-sprite.png');
   background-repeat: no-repeat;
   height: 50px;
@@ -14,8 +13,10 @@
 }
 
 .talent-border {
+  cursor: pointer;
   background: $talent-border;
-  padding: 3px;
+  padding: 4px;
+  border: none;
 }
 
 .talent-border-selected {

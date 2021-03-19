@@ -35,7 +35,7 @@ const selectTalent = (state: TalentCalculatorState, path: string, talentIndex: n
     const clonedTalents = JSON.parse(JSON.stringify((state as any)[path]));
     let currentSpentPoints = state.pointsSpent;
 
-    if (clonedTalents[talentIndex].isSelectable && state.pointsSpent < state.totalAvailablePoints) {
+    if (clonedTalents[talentIndex].isSelectable && !clonedTalents[talentIndex].isSelected && state.pointsSpent < state.totalAvailablePoints) {
         clonedTalents[talentIndex].isSelected = true;
         clonedTalents[talentIndex].isDeselectable = true;
         currentSpentPoints += 1;

@@ -15,18 +15,20 @@ interface IProps {
 export const TalentPath = (props: IProps) => {
   return (
     <div className="talent-path">
-      <div className="path-name">{props.pathName}</div>
-      <ul className="talent-buttons">
+      <h2 className="path-name">{props.pathName}</h2>
+      <div className="talent-buttons">
         {props.talents.map((talent, index) => 
           <TalentButton
+            key={`talent-${talent.path}-${index}`}
             index={index}
             lastIndex={props.talents.length - 1}
+            name={talent.name}
             imageClass={talent.image}
             path={talent.path}
             isSelected={talent.isSelected}
           />
         )}
-      </ul>
+      </div>
     </div>
   );
 }

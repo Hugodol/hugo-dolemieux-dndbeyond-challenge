@@ -35,7 +35,7 @@ class TalentCalculator extends React.Component<IProps, {}> {
   render() {
     return (
       <div className="talent-calculator-container">
-        <div className="talent-calculator-title">TitanStar Legends - Rune Mastery Loadout Talent Calculator 9000</div>
+        <h1 className="talent-calculator-title">TitanStar Legends - Rune Mastery Loadout Talent Calculator 9000</h1>
         <div className="main-content">
           <div className="talent-path-container">
             <TalentPath pathName={'TALENT PATH 1'} talents={this.props.firstPathTalents} />
